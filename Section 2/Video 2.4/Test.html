@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <title></title>
+</head>
+<body>
+    <div name="test"></div>
+</body>
+</html>
+<script>
+    $.ajax({
+        method: "GET",
+        url: "https://helloserverlessfn.azurewebsites.net/api/HttpTriggerJS2/name/Azure"
+    })
+        .done(function (msg) {
+            $("[name=test]").html(msg);
+        });
+</script>

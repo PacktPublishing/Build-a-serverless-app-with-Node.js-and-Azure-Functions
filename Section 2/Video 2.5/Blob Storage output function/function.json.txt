@@ -1,0 +1,27 @@
+{
+  "bindings": [
+ 	{
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },   
+    {
+      "name": "outputBlob",
+      "type": "blob",
+      "path": "outcontainer/{rand-guid}.txt",
+      "connection:"helloserverlessfn_Storage",
+      "direction": "out"
+    }
+ ],
+ "disabled" : false
+}

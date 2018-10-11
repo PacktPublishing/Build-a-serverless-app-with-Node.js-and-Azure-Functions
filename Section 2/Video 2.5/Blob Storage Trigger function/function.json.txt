@@ -1,0 +1,12 @@
+{
+  "bindings": [
+   {
+	"name":"myBlob",
+	"type":"blobTrigger",
+	"direction":"in",
+	"path":"outcontainer",
+	"connection:"helloserverlessfn_Storage"   
+   }
+ ],
+ "disabled" : false
+}

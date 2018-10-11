@@ -1,0 +1,4 @@
+module.exports=async function(context,req){
+    context.bindings.outputBlob={"Hello":"World"}
+    context.done();
+};
